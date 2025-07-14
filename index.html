@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Curricular Interactiva - Administración Hotelera</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Malla Curricular Interactiva</h1>
+    <p>Administración Hotelera y Gastronómica | 1° a 6° semestre</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-button active" data-semestre="1">1° Semestre</button>
+    <button class="tab-button" data-semestre="2">2° Semestre</button>
+    <button class="tab-button" data-semestre="3">3° Semestre</button>
+    <button class="tab-button" data-semestre="4">4° Semestre</button>
+    <button class="tab-button" data-semestre="5">5° Semestre</button>
+    <button class="tab-button" data-semestre="6">6° Semestre</button>
+  </nav>
+
+  <main>
+    <section id="malla-container">
+
+      <!-- Cada semestre tendrá su contenedor con ramos -->
+      <div class="semestre active" data-semestre="1">
+        <!-- Ramo ejemplo -->
+        <!-- Ramo, con data para JS (créditos, prerrequisitos, área) -->
+        <div class="ramo" 
+             data-nombre="Administración 1" 
+             data-creditos="6" 
+             data-prerequisitos="" 
+             data-area="gestión"
+             tabindex="0">
+          Administración 1
+        </div>
+
+        <div class="ramo" data-nombre="Matemáticas" data-creditos="4" data-prerequisitos="" data-area="matemáticas" tabindex="0">Matemáticas</div>
+
+        <div class="ramo" data-nombre="Higiene y Manipulación de Alimentos" data-creditos="4" data-prerequisitos="" data-area="higiene" tabindex="0">Higiene y Manipulación de Alimentos</div>
+
+        <div class="ramo" data-nombre="Introducción a la hotelería I" data-creditos="4" data-prerequisitos="" data-area="hotelería" tabindex="0">Introducción a la hotelería I</div>
+
+        <div class="ramo" data-nombre="Inglés inicial" data-creditos="4" data-prerequisitos="" data-area="idiomas" tabindex="0">Inglés inicial</div>
+
+        <div class="ramo" data-nombre="Taller de autorregulación" data-creditos="4" data-prerequisitos="" data-area="habilidades" tabindex="0">Taller de autorregulación</div>
+
+        <div class="ramo" data-nombre="Introducción a la restauración y servicio" data-creditos="4" data-prerequisitos="" data-area="restauración" tabindex="0">Introducción a la restauración y servicio</div>
+      </div>
+
+      <div class="semestre" data-semestre="2">
+        <div class="ramo" data-nombre="Administración 2" data-creditos="6" data-prerequisitos="Administración 1" data-area="gestión" tabindex="0">Administración 2</div>
+        <div class="ramo" data-nombre="Inglés I" data-creditos="4" data-prerequisitos="Inglés inicial" data-area="idiomas" tabindex="0">Inglés I</div>
+        <div class="ramo" data-nombre="Contabilidad financiera" data-creditos="4" data-prerequisitos="" data-area="contabilidad" tabindex="0">Contabilidad financiera</div>
+        <div class="ramo" data-nombre="Química de los alimentos" data-creditos="4" data-prerequisitos="" data-area="química" tabindex="0">Química de los alimentos</div>
+        <div class="ramo" data-nombre="Cocina institucional" data-creditos="4" data-prerequisitos="" data-area="cocina" tabindex="0">Cocina institucional</div>
+        <div class="ramo" data-nombre="Turismo" data-creditos="4" data-prerequisitos="" data-area="turismo" tabindex="0">Turismo</div>
+        <div class="ramo" data-nombre="Comunicación y tecnologías de la información" data-creditos="4" data-prerequisitos="" data-area="comunicación" tabindex="0">Comunicación y tecnologías de la información</div>
+      </div>
+
+      <!-- Sigue el resto de los semestres... -->
+
+    </section>
+
+    <aside id="info-ramo" aria-live="polite">
+      <h2>Detalles del ramo</h2>
+      <p>Haz clic en un ramo para ver sus detalles aquí.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <small>Creado por Antonella Díaz - Administración Hotelera y Gastronómica</small>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
